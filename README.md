@@ -14,3 +14,5 @@ fuARTet | Fusion | Quartet | [fuartet.cz](http://fuartet.cz)
 [Bandcamp](https://fuartet.bandcamp.com/)
 
 [Twitter](https://www.twitter.com/fuartetcz/)
+
+[Github Pages](https://lupynos.github.io/fuartet/)
