@@ -25,7 +25,7 @@ fuARTet | Fusion | Quartet | [fuartet.cz](http://fuartet.cz)
 
 ### Build command
 
-> npx tailwindcss -i ./input.css -o ./output.css
+> npx tailwindcss -i ./input.css -o ./files/css/output.css --watch
 
-This will generate output.css file which is used in HTML doc for style - input.css is required
+As you edit HTML, Tailwind will generate output.css file which is used in HTML doc for style - input.css is required to generate
 
