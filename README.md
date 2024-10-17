@@ -16,3 +16,16 @@ fuARTet | Fusion | Quartet | [fuartet.cz](http://fuartet.cz)
 [Twitter](https://www.twitter.com/fuartetcz/)
 
 [Github Pages](https://lupynos.github.io/fuartet/)
+
+
+## How to build CSS using Tailwind
+
+### Prerequisities
+[Node.js](https://nodejs.org/en/download/) installed, [Tailwind CSS](https://tailwindcss.com/docs/installation) installed (CLI) and path conigured.
+
+### Build command
+
+> npx tailwindcss -i ./input.css -o ./output.css
+
+This will generate output.css file which is used in HTML doc for style - input.css is required
+
