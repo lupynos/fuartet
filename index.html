@@ -19,12 +19,12 @@
 
   <header class="max-w-3xl mx-auto bg-black text-white bg-opacity-60 flex">
     <nav
-      class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4 justify-items-center w-full uppercase text-xl font-extrabold"
+      class="flex flex-col md:flex-row justify-center text-center space-y-4 md:space-y-0 md:space-x-4 justify-items-center w-full uppercase text-xl font-extrabold"
     >
-      <a class="p-8 hover:text-indigo-500" href="#events">Události</a>
-      <a class="p-8 hover:text-indigo-500" href="#music">Vydání</a>
-      <a class="p-8 hover:text-indigo-500" href="#about">O nás</a>
-      <a class="p-8 hover:text-indigo-500" href="#contact">Kontakt</a>
+      <a class="p-2 md:p-8 hover:text-indigo-500" href="#events">Události</a>
+      <a class="p-2 md:p-8 hover:text-indigo-500" href="#music">Vydání</a>
+      <a class="p-2 md:p-8 hover:text-indigo-500" href="#about">O nás</a>
+      <a class="p-2 md:p-8 hover:text-indigo-500" href="#contact">Kontakt</a>
     </nav>
   </header>
 
@@ -142,7 +142,7 @@
     >
       <h2 class="uppercase text-xl font-extrabold">Vydání</h2>
       <div class="flex flex-col md:flex-row mt-6 space-y-4 md:space-y-0 md:space-x-4">
-        <div class="w-full md:w-1/2 md:pr-4">
+        <div class="w-full md:w-1/2 md:pr-4 flex justify-center">
           <iframe
             src="https://open.spotify.com/embed/album/2X8KhSwfEQDRBAhESR7jT7?utm_source=generator&theme=0"
             height="588px"
@@ -152,7 +152,7 @@
             loading="lazy"
           ></iframe>
         </div>
-        <div class="w-full md:w-1/2">
+        <div class="w-full md:w-1/2 flex justify-center">
           <iframe
             src="https://bandcamp.com/EmbeddedPlayer/album=2936157315/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/"
             style="height: 586px"
@@ -166,7 +166,7 @@
     </section>
     <section
       id="about"
-      class="max-w-3xl mx-auto p-8 bg-black mt-16 bg-opacity-60"
+      class="max-w-3xl mx-auto p-8 mt-16 bg-black bg-opacity-60"
     >
       <h2 class="uppercase text-xl font-extrabold">O nás</h2>
       <p>
@@ -212,30 +212,19 @@
         </p>
       </div>
     </section>
-    <section id="videos" class="max-w-3xl mx-auto">
-      <p>
-        <iframe
-          style="max-width: 100%"
-          width="960"
-          height="540"
+    <section id="videos" class="max-w-3xl mx-auto bg-black bg-opacity-60">
+        <iframe class="aspect-video w-full"
           src="https://www.youtube.com/embed/vOi-FWBl8PA"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </p>
-
-      <p>
-        <iframe
-          style="max-width: 100%"
-          width="960"
-          height="540"
+        <iframe class="mt-8 aspect-video w-full"
           src="https://www.youtube.com/embed/tiTvSvHy9J0"
           frameborder="0"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
         ></iframe>
-      </p>
     </section>
     <section
       id="contact"
