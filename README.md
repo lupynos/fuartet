@@ -21,7 +21,7 @@ fuARTet | Fusion | Quartet | [fuartet.cz](http://fuartet.cz)
 ## How to build CSS using Tailwind
 
 ### Prerequisities
-[Node.js](https://nodejs.org/en/download/) installed, [Tailwind CSS](https://tailwindcss.com/docs/installation) installed (CLI) and path conigured.
+[Node.js](https://nodejs.org/en/download/) installed, [Tailwind CSS (v3)](https://v3.tailwindcss.com/docs/installation) installed (CLI) and path conigured.
 
 ### Build command
 
