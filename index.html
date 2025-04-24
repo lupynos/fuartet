@@ -15,10 +15,34 @@
     <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
     <!-- <link rel="stylesheet" href="files/css/fuartet.css" type="text/css"> -->
     <link rel="stylesheet" href="files/css/output.css" type="text/css" />
+    <script>
+      function toggleBackgroundVideoMute(){
+        const vid = document.getElementById('bg-video');
+        const btn = document.getElementById('bg-video-mute-control')
+
+        vid.muted = !vid.muted
+  
+        if (!vid.muted) {
+          btn.innerHTML = '&#128266;'
+        } else {
+          btn.innerHTML = '&#128263;'
+        }
+      }
+    </script>
   </head>
   <body
     class="bg-[url('../pic/bg.jpg')] bg-fixed bg-cover bg-center bg-no-repeat text-white font-sans"
   >
+    <video class="fixed -z-10 w-auto min-w-full min-h-full max-w-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      autoplay muted loop playsinline id="bg-video">
+      <source src="files/pic/placeholder_zelva_short.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <button class="fixed right-5 bottom-5 bg-black py-4 px-4 text-3xl"
+      id="bg-video-mute-control"
+      onclick="toggleBackgroundVideoMute()">
+      &#128263;
+    </button>
     <header class="max-w-3xl mx-auto bg-black text-white bg-opacity-60 flex">
       <nav
         class="flex flex-col p-4 md:p-0 md:px-8 md:flex-row justify-center text-center space-y-4 md:space-y-0 md:space-x-4 justify-items-center w-full uppercase text-xl font-extrabold"
