@@ -554,9 +554,18 @@ video {
   display: none;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .mt-12 {
@@ -603,6 +612,22 @@ video {
   max-width: 48rem;
 }
 
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
+}
+
+.max-w-5xl {
+  max-width: 64rem;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
@@ -640,8 +665,40 @@ video {
   --tw-bg-opacity: 0.6;
 }
 
-.bg-\[url\(\'\.\.\/pic\/bg\.jpg\'\)\] {
-  background-image: url('../pic/bg.jpg');
+.bg-\[url\(\'\.\.\/pic\/F4\.jpg\'\)\] {
+  background-image: url('../pic/F4.jpg');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F2\.jpg\'\)\] {
+  background-image: url('../pic/F2.jpg');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F2\.jpeg\'\)\] {
+  background-image: url('../pic/F2.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F1\.jpeg\'\)\] {
+  background-image: url('../pic/F1.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F1\.png\'\)\] {
+  background-image: url('../pic/F1.png');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F4\.png\'\)\] {
+  background-image: url('../pic/F4.png');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F4\.JPG\'\)\] {
+  background-image: url('../pic/F4.JPG');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F4s\.jpeg\'\)\] {
+  background-image: url('../pic/F4s.jpeg');
+}
+
+.bg-\[url\(\'\.\.\/pic\/F4s\.jpg\'\)\] {
+  background-image: url('../pic/F4s.jpg');
 }
 
 .bg-cover {
@@ -652,8 +709,32 @@ video {
   background-attachment: fixed;
 }
 
+.bg-scroll {
+  background-attachment: scroll;
+}
+
 .bg-center {
   background-position: center;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-\[position\:0_500px\] {
+  background-position: 0 500px;
+}
+
+.bg-\[position\:0_-500px\] {
+  background-position: 0 -500px;
+}
+
+.bg-\[position\:0_-200px\] {
+  background-position: 0 -200px;
+}
+
+.bg-\[position\:0_-260px\] {
+  background-position: 0 -260px;
 }
 
 .bg-no-repeat {
@@ -719,6 +800,26 @@ video {
 .hover\:text-indigo-500:hover {
   --tw-text-opacity: 1;
   color: rgb(99 102 241 / var(--tw-text-opacity));
+}
+
+.hover\:text-teal-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(15 118 110 / var(--tw-text-opacity));
+}
+
+.hover\:text-cyan-800:hover {
+  --tw-text-opacity: 1;
+  color: rgb(21 94 117 / var(--tw-text-opacity));
+}
+
+.hover\:text-cyan-700:hover {
+  --tw-text-opacity: 1;
+  color: rgb(14 116 144 / var(--tw-text-opacity));
+}
+
+.hover\:text-cyan-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(8 145 178 / var(--tw-text-opacity));
 }
 
 @media (min-width: 768px) {
