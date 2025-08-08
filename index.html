@@ -185,18 +185,6 @@
   <p class="text-center">{{ site.time | date: "%Y-%m-%d" }} (git)</p>
 </footer>
 
-<script>
-fetch('https://api.github.com/repos/<tvůj-username>/<repo>/commits/main')
-  .then(res => res.json())
-  .then(data => {
-    const date = new Date(data.commit.committer.date);
-    document.getElementById('commit-date').textContent =
-      date.toISOString().split('T')[0] + ' (git)';
-  })
-  .catch(() => {
-    document.getElementById('commit-date').textContent = 'Neznámé datum';
-  });
-</script>
 </body>
 
 </html>
