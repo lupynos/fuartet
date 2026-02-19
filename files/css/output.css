@@ -592,6 +592,10 @@ video {
   margin-top: 3rem;
 }
 
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .mt-3 {
   margin-top: 0.75rem;
 }
@@ -606,10 +610,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -668,13 +668,9 @@ video {
   justify-items: center;
 }
 
-.gap-x-6 {
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
-}
-
-.gap-y-1 {
-  row-gap: 0.25rem;
+.gap-x-2 {
+  -moz-column-gap: 0.5rem;
+       column-gap: 0.5rem;
 }
 
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
@@ -689,23 +685,8 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
-.space-y-6 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-}
-
-.rounded-xl {
-  border-radius: 0.75rem;
-}
-
 .border {
   border-width: 1px;
-}
-
-.border-gray-200 {
-  --tw-border-opacity: 1;
-  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
 }
 
 .bg-black {
@@ -750,6 +731,10 @@ video {
      object-fit: contain;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -762,12 +747,20 @@ video {
   padding: 2rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
 .pt-4 {
   padding-top: 1rem;
 }
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .font-sans {
@@ -797,38 +790,22 @@ video {
   font-weight: 800;
 }
 
-.font-semibold {
-  font-weight: 600;
+.font-normal {
+  font-weight: 400;
 }
 
 .uppercase {
   text-transform: uppercase;
 }
 
-.text-gray-500 {
+.text-gray-400 {
   --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-600 {
-  --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
-}
-
-.text-gray-700 {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity, 1));
+  color: rgb(156 163 175 / var(--tw-text-opacity, 1));
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
-.shadow-sm {
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .hover\:text-cyan-600:hover {

@@ -20,7 +20,7 @@
 
 
 <body class="bg-[url('../pic/F4s.jpg')] bg-fixed bg-cover bg-center bg-no-repeat text-white font-sans">
-  <header class="max-w-3xl mx-auto bg-black text-white bg-opacity-60 flex">
+H  <header class="max-w-3xl mx-auto bg-black text-white bg-opacity-60 flex">
     <nav
       class="flex flex-col p-4 md:p-0 md:px-8 md:flex-row justify-center text-center space-y-4 md:space-y-0 md:space-x-4 justify-items-center w-full uppercase text-xl font-extrabold">
       <a class="p-2 md:p-8 md:w-1/4 hover:text-cyan-600" href="#events">Události</a>
@@ -41,91 +41,228 @@
   </div>
   <section id="events" class="max-w-3xl mx-auto p-8 bg-black mt-12 bg-opacity-60">
     <h2 class="uppercase text-xl font-extrabold">Události</h2>
-    <p>
-      Naše nadcházející koncerty si můžete prohlédnout na
+    <p class="mt-2">
       <a class="hover:text-cyan-600 font-extrabold" href="https://www.facebook.com/fuartet/events" target="_blank">
-        🔗našem Facebook profilu</a>.
-    </p>
-    <hr />
-    <p>Pátek 12. června 2026 --- Zahrada U Sosny | Brno</p>
-    <p>Pátek 17. dubna 2026 --- Koncert v Dobrém místě | Újezdec - Uherský Brod</p>
-    <p>Pátek 27. března 2026 --- U Kouřícího Králíka | Brno</p>
-    <hr />
-    <p>Sobota 7. února 2026 --- Kavárna Variace | Olomouc</p>
-    <p>Pátek 16. ledna 2026 --- Klub Oko | Havlíčkův Brod</p>
-    <p>Sobota 13. prosince 2025 ve 20:00 --- Kulatá brána | Hodonín</p>
-    <p>Sobota 11. října 2025 ve 20:00 --- D club | Jihlava</p>
-    <p>
-      Sobota 09. srpna 2025 ve 14:00 --- Festival na Hnojišti (Ratíškovice)
-    </p>
-    <p>Pátek 08. srpna 2025 v 19:00 --- Ponava Cafe, Lužánky (Brno)</p>
-    <p>
-      Pátek 20. června 2025 ve 20:00 --- FuARTeT U kouřícího králíka (Brno)
+        Klikněte sem pro události našich koncertů na Facebooku.<a>
     </p>
     
-    <div class="mx-auto space-y-6">
+    <div id="concerts_upcoming" class="mt-4">
 
-      <div class="grid grid-cols-3 grid-rows-2 gap-x-6 gap-y-1 p-4 rounded-xl border border-gray-200 shadow-sm">
-    
-        <div class="col-start-1 row-start-1 text-lg font-extrabold">
-          Mar 21
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">    
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           12. června
         </div>
+        <div class="col-start-2 row-start-1">
+          2026
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          <!-- time TBA -->
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Brno
+        </div>
+        <div class="col-start-3 row-start-2">
+          Zahrada U Sosny
+        </div>
+      </div>
 
-    <div class="col-start-2 row-start-1">
-      2026
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           17. dubna 2026
+        </div>
+        <div class="col-start-2 row-start-1">
+          2026
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          <!-- time: TBA -->
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Uherský Brod<span class="font-normal pl-1">Újezdec</span>
+        </div>
+        <div class="col-start-3 row-start-2">
+          Dobré Místo
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           27. března
+        </div>
+        <div class="col-start-2 row-start-1">
+          2026
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          <!-- time: TBA -->
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Brno
+        </div>
+        <div class="col-start-3 row-start-2">
+          U Kouřícího Králíka
+        </div>
+      </div>
+    
     </div>
 
-    <div class="col-start-2 row-start-2 text-sm text-gray-600">
-      Saturday
+    <div id="concerts_past" class="text-gray-400 mt-2">
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           7. února
+        </div>
+        <div class="col-start-2 row-start-1">
+          2026
+        </div>
+        <div class="col-start-2 row-start-2">
+          sobota
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          <!-- time: TBA -->
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Olomouc
+        </div>
+        <div class="col-start-3 row-start-2">
+          Kavárna Variace
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           16. ledna
+        </div>
+        <div class="col-start-2 row-start-1">
+          2026
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          <!-- time: TBA -->
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Havlíčkův Brod
+        </div>
+        <div class="col-start-3 row-start-2">
+          Klub Oko
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           13. prosince
+        </div>
+        <div class="col-start-2 row-start-1">
+          2025
+        </div>
+        <div class="col-start-2 row-start-2">
+          sobota
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          20:00
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Hodonín
+        </div>
+        <div class="col-start-3 row-start-2">
+          Kulatá Brána
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           11. října
+        </div>
+        <div class="col-start-2 row-start-1">
+          2025
+        </div>
+        <div class="col-start-2 row-start-2">
+          sobota
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          20:00
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Jihlava
+        </div>
+        <div class="col-start-3 row-start-2">
+          D Club
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           9. srpna
+        </div>
+        <div class="col-start-2 row-start-1">
+          2025
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          14:00
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Ratíškovice
+        </div>
+        <div class="col-start-3 row-start-2">
+          Festival na Hnojišti
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           8. srpna
+        </div>
+        <div class="col-start-2 row-start-1">
+          2025
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          19:00
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Brno<span class="font-normal pl-1">Lužánky</span>
+        </div>
+        <div class="col-start-3 row-start-2">
+          Ponava Cafe
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 grid-rows-2 gap-x-2 p-1 border">
+        <div class="col-start-1 row-start-1 font-extrabold text-right">
+           20. června
+        </div>
+        <div class="col-start-2 row-start-1">
+          2025
+        </div>
+        <div class="col-start-2 row-start-2">
+          pátek
+        </div>
+        <div class="col-start-1 row-start-2 font-extrabold text-right">
+          20:00
+        </div>
+        <div class="col-start-3 row-start-1 font-extrabold">
+          Brno
+        </div>
+        <div class="col-start-3 row-start-2">
+          U Kouřícího Králíka
+        </div>
+      </div>
+    
     </div>
-
-    <div class="col-start-1 row-start-2 text-sm">
-      19:30
-    </div>
-
-    <div class="col-start-3 row-start-1 text-lg font-semibold">
-      Prague
-    </div>
-
-    <div class="col-start-3 row-start-2 text-sm text-gray-700">
-      Lucerna Music Bar
-    </div>
-
-  </div>
-  <!-- End Concert Item -->
-
-
-
-  <!-- Duplicate this block to add more concerts -->
-  <div class="grid grid-cols-3 grid-rows-2 gap-x-6 gap-y-1 p-4 rounded-xl border border-gray-200 shadow-sm">
-
-    <div class="col-start-1 row-start-1 text-lg font-bold">
-      Apr 05
-    </div>
-
-    <div class="col-start-2 row-start-1 text-gray-500">
-      2026
-    </div>
-
-    <div class="col-start-2 row-start-2 text-sm text-gray-600">
-      Sunday
-    </div>
-
-    <div class="col-start-1 row-start-2 text-sm">
-      20:00
-    </div>
-
-    <div class="col-start-3 row-start-1 text-lg font-semibold">
-      Brno
-    </div>
-
-    <div class="col-start-3 row-start-2 text-sm text-gray-700">
-      Fléda Club
-    </div>
-
-  </div>
-
-</div>
 
 
     <div class="flex justify-center mt-6">
@@ -192,7 +329,7 @@
       </div>
     </div>
     <p class="mt-4">
-      <span class="font-extrabold">Hrajeme hlavně pro zábavu</span> a v naší
+<span class="font-extrabold">Hrajeme hlavně pro zábavu</span> a v naší
       hře se snoubí to, co chceme v hudebním kolektivu sdílet. A proto právě
       vznikl instrumentální quartet, hrající výhradně vlastní instrumentální
       skladby, funkové rytmy, rockovou kytaru, bohatý syntezátor, stylově od
