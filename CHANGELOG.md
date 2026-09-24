@@ -6,6 +6,10 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [2.1.1](https://github.com/lupynos/fuartet/compare/v2.1.0...v2.1.1) — 2026-09-24
+
+- Zjednodušen úvod pod bannerem: odstraněn opakovaný název a odkaz na vlastní stránku. Dosavadní popis hudby slouží jako hlavní nadpis h1.
+
 ## [2.1.0](https://github.com/lupynos/fuartet/compare/v2.0.0...v2.1.0) — 2026-09-24
 
 ### Přidáno
