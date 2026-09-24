@@ -1,74 +1,41 @@
-# Technický changelog
+# Historie verzí webu
 
-Záznam změn zdrojového kódu a obsahu webu. Datum označuje provedení změn, nikoli publikování. Stav nasazení sledujte samostatně; zápis v tomto souboru neznamená, že je změna na produkci.
+Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzením dokončeného nasazení na GitHub Pages.
 
 ## Nevydané změny
 
-### 2026-09-23 – širší úvodní blok
+Zatím žádné.
 
-- Od šířky viewportu 1024 px má úvod maximálně 1504 px (1440 px obrázek a 64 px vnitřní okraje). Menší displeje zachovávají původní šířku bloku a vnější okraje.
-- Obrázek vyplňuje dostupnou šířku při zachování poměru stran.
+## [2.1.0](https://github.com/lupynos/fuartet/compare/v2.0.0...v2.1.0) — 2026-09-24
 
+### Přidáno
 
-### 2026-09-23 – zkušební AI úvodní vizuál
+- Sekce členů kapely a materiály pro pořadatele: bio a fotografie ke stažení.
+- Úvodní akce Poslechnout a Objednat koncert, AI banner a přepínač jeho šířky na desktopu.
+- Sbalitelný archiv koncertů a aktualizovaný program včetně přesunutého Kyjova a říjnových koncertů.
+- Čtyři YouTube videa včetně aTNTXdjkc1E, odkaz na kanál a přímé odkazy na jednotlivá videa.
 
-- V index.html nasazena alternativní AI ilustrace files/pic/fuartet-hero-ai-v1.webp: tmavý hudební motiv s názvem kapely, modrými liniemi a zlatým akcentem.
-- Webová varianta má rozměry 1440 × 480 px, explicitní rozměry v HTML a vysokou prioritu načtení.
-- Původní Fuartet1.webp zůstává zachovaný; návrat vyžaduje změnu src a rozměrů zpět na 592 × 132 px.
-- Ověřen vytvořený obrázek a jeho reference; vizuální kontrola celé stránky nebyla provedena.
+### Změněno a opraveno
 
+- Sekce Vydání přejmenována na Hudba; videa přesunuta hned za ni a přidána do navigace.
+- Responzivní galerie videí 2 × 2, na mobilu jeden sloupec; odložené načítání přehrávačů.
+- Rozložení navigace, členů, fotografií, přehrávačů a sociálních ikon pro menší displeje.
+- Přístupnost: hlavní nadpis, navigační popisky, přeskočení na obsah, focus a názvy iframe.
+- Fotografie ve WebP, explicitní rozměry a lazy loading; původní fotografie zachovány.
+- Vlastní styly odděleny od generovaného CSS, Tailwind 3.4.17 připnutý pomocí pnpm lockfilu.
+- Zachováno zpracování data sestavení Jekyllem pomocí front matter a site.time.
+- README zkráceno na rozcestník; návody přesunuty do docs/DEVELOPMENT.md. Verze package.json sjednocena s tagem webu.
 
-### 2026-09-23 – obnovení data sestavení pro GitHub Pages
+### Ověření a známá omezení
 
-- Obnoven prázdný YAML front matter v index.html a původní Liquid výraz site.time v nenápadné patičce. Předchozí odstranění nesprávně předpokládalo publikaci bez Jekyllu.
-- Doplněn styl publication-date v site.css a vysvětlení rozdílu mezi statickým HTTP náhledem a Jekyll buildem v README.
-- Ověřena přítomnost front matter, Liquid výrazu a čistota diffu; produkční Jekyll build nebyl lokálně spuštěn.
+- Kontrola struktury HTML, lokálních souborů, kotev, obrázků a JavaScriptu; build CSS a kontrola diffu před označením verze.
+- Skutečné přehrávání externích médií, vizuální kontrola celé stránky a produkční Jekyll build nebyly v tomto vydání automaticky ověřeny.
+- Videa zatím mají neutrální popisky; technický rider čeká na dodání kapelou.
 
+## Starší verze
 
-### 2026-09-23 – synchronizace s origin/main
+V repozitáři existují tagy v1.0.0, v1.0.1, v1.0.2, v1.0.3 a v2.0.0. Podrobný changelog k nim nebyl veden; historii změn zachovává Git. Pracovní poznámky ze září 2026 jsou v [archivu](docs/CHANGELOG-DETAILS.md).
 
-- Převzat commit cb934b5 s přesunem koncertu Víno a Jazz v Kyjově na 4. září 2026 v 19:30.
-- Vyřešen konflikt v index.html: zachován sbalitelný archiv, lokální říjnové koncerty v Zábřehu a Opavě i ostatní rozpracované úpravy.
-- Před synchronizací vytvořena záloha rozpracovaných změn v Git stash (codex-backup-before-pull-2026-09-23).
+## Postup vydání
 
-
-### 2026-09-23
-
-#### Opravy
-
-- Responzivní navigace, zalamování sociálních ikon a svislé rozložení profilů členů.
-- Sekce O nás a hudební přehrávače používají jeden sloupec na mobilu a dva na širších obrazovkách; iframe přehrávače vyplňují dostupnou šířku.
-- Doplněn hlavní nadpis, landmark main, odkaz pro přeskočení navigace, názvy navigací, popisky iframe a viditelný focus pro ovládání klávesnicí.
-- Odstraněna nezpracovaná Liquid šablona v patičce a prázdná Jekyll front matter; HTML funguje jako samostatný statický dokument.
-- Proběhlé termíny odděleny do archivu. Doplněny atributy rel u odkazů otevíraných do nové karty.
-
-#### Funkce a obsah
-
-- Úvodní odkazy Poslechnout, Objednat koncert a Pro pořadatele.
-- Sbalitelný archiv 11 koncertů z let 2025–2026 včetně plakátu, založený na nativním details/summary bez JavaScriptu.
-- Sekce Pro pořadatele: krátké bio, TXT ke stažení a dvě původní JPG fotografie.
-- Kontaktní text pro poptávku koncertu; technické požadavky se domlouvají individuálně, rider dosud není dodán.
-- Rozšířen meta description.
-
-#### CSS, výkon a sestavení
-
-- Nový files/css/site.css načítaný po Tailwind CSS obsahuje vlastní responzivní styly a styly nových prvků.
-- Sedm používaných rastrových obrázků převedeno do WebP: celkem 1 804 753 → 377 756 bajtů (přibližně −79 %). Originály zachovány.
-- Obrázky mají explicitní rozměry; fotografie mimo úvod a iframe používají lazy loading.
-- Pozadí na mobilu nepoužívá fixed attachment.
-- Přidán package.json s build/watch skripty, Tailwind CSS 3.4.17 a pnpm-lock.yaml; manifest i lockfile již nejsou ignorovány Gitem.
-- Tailwind skenuje index.html; vygenerovaný output.css je minifikovaný.
-- README obsahuje postup sestavení, údržby, lokálního HTTP náhledu a diagnostiky vložených přehrávačů.
-
-#### Ověření a omezení
-
-- Úspěšné sestavení CSS a instalace přes pnpm install --frozen-lockfile.
-- Ověřeny lokální soubory, kotvy, unikátní ID, rozměry obrázků, popisky iframe, CSS pozadí a obsah sbaleného archivu.
-- git diff --check bez chyb po sjednocení konců řádků.
-- Build hlásil zastaralá data caniuse-lite; sestavení dokončil úspěšně.
-- Vizuální kontrola a skutečné přehrávání externích médií dosud neověřeny. Automatizovaný prohlížeč odmítl přístup k lokálnímu file URL.
-- Změny při zápisu tohoto záznamu nebyly commitnuté ani publikované.
-
-## Jak historii udržovat
-
-Při každé věcné změně doplňte do sekce Nevydané změny datum, dotčené soubory nebo části webu, důvod změny a provedené ověření. Při vydání přesuňte odpovídající záznamy pod nadpis s datem nasazení a doplňte skutečný Git commit nebo tag. Nevymýšlejte zpětně verze ani identifikátory commitů. Detailní diff zůstává v Gitu.
+Zapište změny pod Nevydané změny. Před vydáním je přesuňte pod nové číslo a datum, aktualizujte package.json, ověřte build a web a vytvořte commit a anotovaný tag vX.Y.Z. Pushněte větev i konkrétní tag; potom ověřte výsledek GitHub Pages. Starší tagy nepřepisujte.

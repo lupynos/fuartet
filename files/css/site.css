@@ -49,3 +49,30 @@ footer { padding: 1rem; margin-bottom: 1rem; }
 @media (min-width: 1024px) {
   #intro { max-width: 1504px; }
 }
+
+/* Video gallery: keep media together before the band biography. */
+.video-heading { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.video-heading a, .video-card > a { text-decoration: underline; text-underline-offset: 0.2em; }
+.video-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 1.5rem; margin-top: 1.5rem; }
+.video-card { min-width: 0; border: 1px solid #ffffff30; border-radius: 0.5rem; overflow: hidden; background: #101820; }
+.video-card-featured { border-color: #67e8f9; }
+.video-card h3 { padding: 0.75rem 1rem; font-weight: 700; }
+.video-card-featured h3 { color: #67e8f9; }
+.video-card iframe { display: block; width: 100%; height: auto; min-height: 200px; aspect-ratio: 16 / 9; border: 0; background: #000; }
+.video-card > a { display: inline-block; padding: 0.75rem 1rem; }
+@media (min-width: 768px) {
+  .video-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Optional banner width control, only where the two widths differ. */
+#intro { position: relative; }
+.banner-toggle { display: none; }
+.banner-toggle .icon-expand { display: none; }
+.intro-compact .banner-toggle .icon-collapse { display: none; }
+.intro-compact .banner-toggle .icon-expand { display: block; }
+@media (min-width: 1024px) {
+  #intro.intro-compact { max-width: 48rem; }
+  .banner-toggle:not([hidden]) { display: grid; place-items: center; position: absolute; top: 0.5rem; right: 0.5rem; width: 44px; height: 44px; border: 1px solid #ffffff30; border-radius: 50%; color: #cbd5e1; background: #101820cc; cursor: pointer; }
+  .banner-toggle:hover { color: #67e8f9; border-color: #67e8f9; }
+  .banner-toggle:focus-visible { outline: 3px solid #67e8f9; outline-offset: 3px; }
+}
