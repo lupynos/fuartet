@@ -6,28 +6,30 @@ Web představuje kapelu, koncerty, hudbu a videa. Pořadatelé zde najdou kontak
 
 ## Co je v repozitáři
 
-Jednostránkový web v HTML a CSS, publikovaný přes GitHub Pages s Jekyllem. Tailwind pomáhá se styly; drobný JavaScript přepíná šířku úvodního banneru. Obsah funguje i bez něj.
+Jednostránkový web v HTML a CSS, publikovaný přes GitHub Pages s Jekyllem. Verze 3 používá vlastní responzivní CSS; drobný JavaScript načítá YouTube a Spotify až po kliknutí. Bez JavaScriptu zůstává obsah dostupný a hudbu lze otevřít přímo u poskytovatelů.
 
 | Co chci upravit | Kde to najdu |
 | --- | --- |
 | Koncerty, texty, odkazy a videa | `index.html` |
 | Vzhled a rozložení | `files/css/site.css` |
-| Přepínání šířky banneru | `files/js/site.js` |
+| Načítání přehrávačů | `files/js/site.js` |
 | Fotografie a grafika | `files/pic/` |
 | Bio ke stažení | `files/press/fuartet-bio.txt` |
 | Historie vydání | [CHANGELOG.md](CHANGELOG.md) |
+
+Koncerty jsou řazené od nejbližšího; při změně programu aktualizujte i upoutávku v úvodu. Fotogalerie používá původní fotografie, videa se načítají na vyžádání a medailonky i materiály pro pořadatele se rozbalují.
 
 Při úpravě bia aktualizujte text na stránce i soubor ke stažení. Proběhlé koncerty patří do sbalitelného archivu.
 
 ## Náhled a údržba
 
-Pro lokální náhled stačí HTTP server; hotové CSS je součástí repozitáře. Postup spuštění, build Tailwindu a řešení problémů s přehrávači jsou v [návodu pro správu webu](docs/DEVELOPMENT.md).
+Pro lokální náhled stačí HTTP server; CSS se upravuje přímo, bez sestavování. Postup spuštění a řešení problémů s přehrávači jsou v [návodu pro správu webu](docs/DEVELOPMENT.md).
 
 Na začátku `index.html` ponechte prázdný YAML front matter (dva řádky `---`). Jekyll díky němu při sestavení doplní datum do patičky. Obyčejný lokální HTTP server tuto šablonu nevyhodnocuje.
 
 ## Verze webu
 
-Významnější úpravy označujeme Git tagem, nyní **v2.1.1**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Významnější úpravy označujeme Git tagem, nyní **v3.0.0**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.

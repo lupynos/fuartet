@@ -6,6 +6,18 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [3.0.0](https://github.com/lupynos/fuartet/compare/v2.1.1...v3.0.0) — 2026-09-26
+
+- Schválený mobilní redesign nasazen jako hlavní index.html; zachován tmavý vzhled, AI banner a tyrkysové akcenty.
+- Výraznější úvod s hlavními akcemi a upoutávkou na nejbližší koncert; koncerty seřazeny chronologicky.
+- Hlavní video, rozbalitelná galerie a Spotify načítané až po kliknutí. Externí odkazy fungují i bez JavaScriptu.
+- Rozbalitelné medailonky členů a materiály pro pořadatele; schválené delší bio sjednoceno se souborem ke stažení.
+- Galerie tří původních fotografií s odkazy na plná JPG a responzivním rozložením.
+- Aktivní CSS a JS přesunuty z preview do site.css/site.js. Stránka nevyžaduje build Tailwindu; historické soubory zachovány.
+- Zachován Jekyll front matter a datum sestavení v patičce, odstraněno noindex a testovací označení. test.html přesměrovává na hlavní web.
+- Zachovány starší sekční kotvy; aktualizováno README a dokumentace údržby.
+- Ověřeny lokální soubory, kotvy, bio a syntaxe JS; mobilní rozložení a načítání iframe byly ověřeny na schváleném návrhu. Přehrávání externích médií a produkční Jekyll build dosud nejsou potvrzené.
+
 ## [2.1.1](https://github.com/lupynos/fuartet/compare/v2.1.0...v2.1.1) — 2026-09-24
 
 - Zjednodušen úvod pod bannerem: odstraněn opakovaný název a odkaz na vlastní stránku. Dosavadní popis hudby slouží jako hlavní nadpis h1.

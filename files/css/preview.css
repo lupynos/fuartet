@@ -30,6 +30,3 @@
   .photo-grid figure:nth-child(2) { margin-top: 48px; }
   .photo-grid figure:nth-child(3) { margin-top: 96px; }
 }
-
-.publication-date { margin-top: 16px; font-size: 12px; color: var(--muted); }
-.anchor-alias { display: block; scroll-margin-top: 100px; }

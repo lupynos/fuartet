@@ -4,7 +4,11 @@ Statický web kapely: https://fuartet.cz/
 
 Pro pouhou kontrolu webu není potřeba pnpm ani nový build; vygenerované CSS je v repozitáři. Máte-li Python, spusťte z kořene projektu `py -m http.server 8080 --bind 127.0.0.1` a otevřete http://127.0.0.1:8080/.
 
-## Vývoj a build
+## Styly ve verzi 3
+
+Aktivní stránka používá pouze files/css/site.css a files/js/site.js. Build Tailwindu pro ni není potřeba. Níže uvedené příkazy se týkají pouze zachovaných souborů starší verze; output.css už se v hlavní stránce nenačítá.
+
+## Historický build Tailwindu (v2)
 
 Je potřeba Node.js a pnpm. Z kořene projektu spusťte:
 
@@ -19,7 +23,7 @@ Commitujte také vygenerovaný `files/css/output.css`, protože hosting podává
 
 ## Úpravy obsahu a vzhledu
 
-- Obsah je v `index.html`. Prázdný YAML front matter na začátku a Liquid výraz v patičce zpracovává při publikaci Jekyll. Obsah funguje bez JavaScriptu; volitelný přepínač šířky banneru obsluhuje `files/js/site.js`.
+- Obsah je v `index.html`. Prázdný YAML front matter na začátku a Liquid výraz v patičce zpracovává při publikaci Jekyll. Obsah funguje bez JavaScriptu; načítání externích přehrávačů po kliknutí obsluhuje `files/js/site.js`.
 - Vlastní styly upravujte v `files/css/site.css`, které se načítá po Tailwindu.
 - `files/css/output.css` neupravujte ručně; generuje jej build.
 - Proběhlé koncerty patří do sbalitelného archivu. Nové termíny přidejte nad archiv.
