@@ -39,6 +39,8 @@ Významnější úpravy označujeme Git tagem, nyní **v3.0.1**. Číslo označu
 
 Ke každému vydání patří záznam v changelogu, odpovídající verze v `package.json` a tag `vX.Y.Z`. Úspěšné nasazení na GitHub Pages je samostatný krok; samotný tag je nepotvrzuje.
 
+Po pushi do `main` zkontrolujte v [GitHub Actions](https://github.com/lupynos/fuartet/actions) běh **pages build and deployment**. U úspěšného běhu ověřte, že odpovídá právě odeslanému commitu; samotné vytvoření GitHub Release publikaci webu nepotvrzuje.
+
 ## Kontakt
 
 Koncerty a spolupráce: [borovicka.t@gmail.com](mailto:borovicka.t@gmail.com). Chyby webu lze hlásit přes [GitHub Issues](https://github.com/lupynos/fuartet/issues).
