@@ -12,14 +12,16 @@ Jednostránkový web v HTML a CSS, publikovaný přes GitHub Pages s Jekyllem. V
 | --- | --- |
 | Koncerty, texty, odkazy a videa | `index.html` |
 | Vzhled a rozložení | `files/css/site.css` |
-| Načítání přehrávačů | `files/js/site.js` |
+| Načítání přehrávačů a interakce Najdi rytmus | `files/js/site.js` |
 | Fotografie a grafika | `files/pic/` |
 | Bio ke stažení | `files/press/fuartet-bio.txt` |
 | Historie vydání | [CHANGELOG.md](CHANGELOG.md) |
 
 Koncerty jsou řazené od nejbližšího; při změně programu aktualizujte i upoutávku v úvodu. Fotogalerie používá původní fotografie, videa se načítají na vyžádání a medailonky i materiály pro pořadatele se rozbalují.
 
-Při úpravě bia aktualizujte text na stránce i soubor ke stažení. Proběhlé koncerty patří do sbalitelného archivu.
+Při úpravě bia aktualizujte text na stránce i soubor ke stažení. Proběhlé koncerty patří do sbalitelného archivu. Archiv je rozdělený podle roků a uvnitř každého roku řazený od nejnovějšího koncertu. U záznamu udržujte datum v atributu `datetime` i jeho viditelný text, město, podnik a případnou poznámku. Rozbalování funguje bez JavaScriptu.
+
+V patičce je drobná interakce **Najdi rytmus**: po čtyřech klepnutích ukáže přibližné tempo v BPM. Funguje myší, dotykem i klávesnicí a nepřehrává zvuk. Fotografické pozadí a jeho tmavý překryv se upravují v `files/css/site.css` v pravidle `body::before`.
 
 ## Náhled a údržba
 
@@ -29,7 +31,7 @@ Na začátku `index.html` ponechte prázdný YAML front matter (dva řádky `---
 
 ## Verze webu
 
-Významnější úpravy označujeme Git tagem, nyní **v3.0.0**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Významnější úpravy označujeme Git tagem, nyní **v3.0.1**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.

@@ -4,9 +4,14 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 ## Nevydané změny
 
+Zatím žádné.
+
+## [3.0.1](https://github.com/lupynos/fuartet/compare/v3.0.0...v3.0.1) — 2026-09-26
+
+- Archiv koncertů graficky sjednocen s novým webem: rozbalovací karta, skupiny podle roku, samostatná data a místa; zachováno všech 11 záznamů.
 - Pod banner přidána akce Domluvit koncert.
 - Předchozí vydání v2.1.1 zachováno jako legacy-v2.html s vlastními historickými CSS a JS a noindex.
-- Vráceno původní fotografické pozadí F4s.webp s tmavým překryvem pro čitelnost.
+- Vráceno původní fotografické pozadí F4s.webp s jemnějším tmavým překryvem pro čitelnost a lepší viditelnost fotografie.
 - V patičce přidána tichá interakce Najdi rytmus: po čtyřech klepnutích zobrazí přibližné tempo v BPM, funguje také klávesnicí.
 
 ## [3.0.0](https://github.com/lupynos/fuartet/compare/v2.1.1...v3.0.0) — 2026-09-26
