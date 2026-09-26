@@ -40,3 +40,7 @@ Ke každému vydání patří záznam v changelogu, odpovídající verze v `pac
 ## Kontakt
 
 Koncerty a spolupráce: [borovicka.t@gmail.com](mailto:borovicka.t@gmail.com). Chyby webu lze hlásit přes [GitHub Issues](https://github.com/lupynos/fuartet/issues).
+
+## Záloha předchozího vzhledu
+
+Původní vydání v2.1.1 je dostupné v `legacy-v2.html` s oddělenými soubory `legacy-v2.css`, `legacy-v2-tailwind.css` a `legacy-v2.js`. Hlavní verze je `index.html`. Záloha má noindex; není nutné ji dále synchronizovat.

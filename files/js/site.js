@@ -26,3 +26,29 @@
     frame.focus();
   }, {once:true});
 })();
+
+// A silent tap-tempo surprise; mouse, touch and keyboard all use native click.
+(() => {
+  const panel = document.querySelector('.rhythm');
+  if (!panel) return;
+  const tap = panel.querySelector('button');
+  const result = panel.querySelector('.rhythm-result');
+  let beats = [], flash;
+  panel.hidden = false;
+  tap.addEventListener('click', () => {
+    const now = performance.now();
+    if (beats.length && now - beats[beats.length - 1] < 180) return;
+    if (beats.length && now - beats[beats.length - 1] > 2500) beats = [];
+    beats.push(now);
+    beats = beats.slice(-8);
+    tap.classList.add('is-beat');
+    clearTimeout(flash);
+    flash = setTimeout(() => tap.classList.remove('is-beat'), 120);
+    if (beats.length < 4) {
+      result.textContent = 'Ještě ' + (4 - beats.length) + '…';
+      return;
+    }
+    const bpm = Math.round(60000 * (beats.length - 1) / (beats[beats.length - 1] - beats[0]));
+    result.textContent = 'Tvůj rytmus: ' + bpm + ' BPM. Pátý člen kapely?';
+  });
+})();

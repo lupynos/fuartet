@@ -4,7 +4,10 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 ## Nevydané změny
 
-Zatím žádné.
+- Pod banner přidána akce Domluvit koncert.
+- Předchozí vydání v2.1.1 zachováno jako legacy-v2.html s vlastními historickými CSS a JS a noindex.
+- Vráceno původní fotografické pozadí F4s.webp s tmavým překryvem pro čitelnost.
+- V patičce přidána tichá interakce Najdi rytmus: po čtyřech klepnutích zobrazí přibližné tempo v BPM, funguje také klávesnicí.
 
 ## [3.0.0](https://github.com/lupynos/fuartet/compare/v2.1.1...v3.0.0) — 2026-09-26
 
