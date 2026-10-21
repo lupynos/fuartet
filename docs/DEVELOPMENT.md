@@ -2,30 +2,21 @@
 
 Statický web kapely: https://fuartet.cz/
 
-Pro pouhou kontrolu webu není potřeba pnpm ani nový build; vygenerované CSS je v repozitáři. Máte-li Python, spusťte z kořene projektu `py -m http.server 8080 --bind 127.0.0.1` a otevřete http://127.0.0.1:8080/.
+Web nepotřebuje instalaci balíčků ani build; hotové CSS je v repozitáři. Máte-li Python, spusťte z kořene projektu `py -m http.server 8080 --bind 127.0.0.1` a otevřete http://127.0.0.1:8080/.
 
 ## Styly ve verzi 3
 
-Aktivní stránka používá pouze files/css/site.css a files/js/site.js. Build Tailwindu pro ni není potřeba. Níže uvedené příkazy se týkají pouze zachovaných souborů starší verze; output.css už se v hlavní stránce nenačítá.
+Aktivní stránka používá pouze files/css/site.css a files/js/site.js. Styly se upravují přímo.
 
-## Historický build Tailwindu (v2)
+## Historické styly (v2)
 
-Je potřeba Node.js a pnpm. Z kořene projektu spusťte:
-
-```sh
-pnpm install --frozen-lockfile
-pnpm run build
-```
-
-Pro průběžné generování Tailwind CSS použijte `pnpm run watch`.
-Tailwind je připnutý na verzi 3.4.17 a strom závislostí ukládá `pnpm-lock.yaml`.
-Commitujte také vygenerovaný `files/css/output.css`, protože hosting podává statické soubory.
+Archivní legacy-v2.html používá hotové files/css/legacy-v2-tailwind.css a vlastní legacy-v2.css. Tyto soubory jsou zachované v repozitáři. Nepoužívaný build Tailwindu byl odstraněn kvůli zranitelnostem jeho závislostí. Původní build lze dohledat v historii Gitu; pro provoz ani úpravy hlavního webu není potřeba.
 
 ## Úpravy obsahu a vzhledu
 
 - Obsah je v `index.html`. Prázdný YAML front matter na začátku a Liquid výraz v patičce zpracovává při publikaci Jekyll. Obsah funguje bez JavaScriptu; načítání externích přehrávačů po kliknutí obsluhuje `files/js/site.js`.
-- Vlastní styly upravujte v `files/css/site.css`, které se načítá po Tailwindu.
-- `files/css/output.css` neupravujte ručně; generuje jej build.
+- Vlastní styly upravujte v `files/css/site.css`.
+- `files/css/output.css` je historický výstup, který hlavní ani archivní stránka nenačítá.
 - Proběhlé koncerty patří do sbalitelného archivu. Nové termíny přidejte nad archiv.
 - Web používá menší WebP obrázky s uvedenými rozměry; původní JPG/PNG zůstávají zachované.
 - Při změně fotek aktualizujte WebP i rozměry `width` a `height`. Fotografie mají kvalitu 82 a delší stranu maximálně 1000 px (pozadí 1600 px). AI banner má 1440 × 480 px a kvalitu 86.
@@ -34,7 +25,7 @@ Commitujte také vygenerovaný `files/css/output.css`, protože hosting podává
 
 ## Kontrola před publikováním
 
-Spusťte build a prohlédněte web na mobilu i desktopu. Ověřte navigaci, archiv, stahování, hudební přehrávače a kontakt. Publikujte HTML, složku `files` a `CNAME`; `node_modules` se nepublikuje.
+Spusťte lokální HTTP server a prohlédněte web na mobilu i desktopu. Ověřte navigaci, archiv, stahování, hudební přehrávače a kontakt. Publikujte HTML, složku `files` a `CNAME`; `node_modules` se nepublikuje.
 
 ## Lokální náhled a vložené přehrávače
 
@@ -44,8 +35,6 @@ V PowerShellu (Node.js a pnpm musí být dostupné):
 
 ```powershell
 cd C:\dev\fuartet
-pnpm install --frozen-lockfile
-pnpm run build
 pnpm dlx http-server@14.1.1 . -a 127.0.0.1 -p 8080 -c-1
 ```
 
@@ -58,7 +47,7 @@ cd C:\dev\fuartet
 py -m http.server 8080 --bind 127.0.0.1
 ```
 
-Při práci s Tailwind třídami spusťte ve druhém terminálu ze stejné složky pnpm run watch. Po úpravách obnovte prohlížeč; server sám stránku neobnovuje. Úpravy site.css build nepotřebují. Při podezření na starou cache použijte Ctrl+F5.
+Po úpravách CSS obnovte prohlížeč; server sám stránku neobnovuje. Při podezření na starou cache použijte Ctrl+F5.
 
 ### Kontrolní postup
 

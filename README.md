@@ -31,7 +31,7 @@ Na začátku `index.html` ponechte prázdný YAML front matter (dva řádky `---
 
 ## Verze webu
 
-Významnější úpravy označujeme Git tagem, nyní **v3.0.1**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Významnější úpravy označujeme Git tagem, nyní **v3.0.2**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.

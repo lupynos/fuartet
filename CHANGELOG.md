@@ -6,6 +6,11 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [3.0.2](https://github.com/lupynos/fuartet/compare/v3.0.1...v3.0.2) — 2026-10-21
+
+- Odstraněn nepoužívaný historický build Tailwindu a jeho závislosti se zranitelnostmi v braces, source-map-js a postcss-selector-parser. Hlavní web používá vlastní CSS; archivní stránka zachovává hotové legacy-v2-tailwind.css.
+- Ověřeno: přegenerování lockfilu pomocí pnpm, bezpečnostní audit bez nálezů, existence lokálních souborů odkazovaných z hlavní a archivní stránky a git diff --check.
+
 ## [3.0.1](https://github.com/lupynos/fuartet/compare/v3.0.0...v3.0.1) — 2026-09-26
 
 - Archiv koncertů graficky sjednocen s novým webem: rozbalovací karta, skupiny podle roku, samostatná data a místa; zachováno všech 11 záznamů.
