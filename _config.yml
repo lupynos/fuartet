@@ -1,0 +1,10 @@
+# Default band version on GitHub Pages: electric | acoustic.
+# Direct links ?theme=electric and ?theme=acoustic override this value.
+band_theme: electric
+exclude:
+  - node_modules
+  - scripts
+  - preview.ps1
+  - dist
+  - package.json
+  - pnpm-lock.yaml

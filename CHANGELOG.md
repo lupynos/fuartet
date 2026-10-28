@@ -6,6 +6,17 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [3.1.0](https://github.com/lupynos/fuartet/compare/v3.0.2...v3.1.0) — 2026-10-28
+
+- Náhled přeskakuje i porty zakázané Windows (WinError 10013); při nedostupnosti celého okolního rozsahu vybere volný port operační systém. Vypisuje skutečnou adresu serveru.
+
+- Lokální testování přes `preview.ps1` a Python HTTP server přímo nad zdroji, bez npm, Node.js a buildu. Průběžné načítání změn, vypnutá cache a automatický výběr volného portu. Node preview server odstraněn; Node zůstává jen pro volitelný statický build k publikaci.
+
+- První návrh varianty Acoustic: krémový podklad, ořechové dřevo, měděné akcenty, patkové nadpisy a vlastní SVG ilustrace strun a kláves. Rozložení i společné koncerty, fotografie a přehrávače zachovány.
+- Přepínač Electric / Acoustic, přímé odkazy s parametrem theme a podpora historie bez opětovného načítání stránky. Samostatný akustický úvod, popis nástrojů a bio ke stažení.
+- Výchozí varianta přes band_theme v konfiguraci Jekyllu nebo BAND_THEME v samostatném Node.js buildu do dist/. Bez nových závislostí.
+- Ověřeno v prohlížeči: obě varianty v šířkách 320–1440 px bez horizontálního přetékání, přepnutí a historie, zachování kotvy, archiv, místní obrázky bez chyb a statické buildy s oběma výchozími variantami. Produkční Jekyll build ani přehrávání externích médií nebyly ověřeny.
+
 ## [3.0.2](https://github.com/lupynos/fuartet/compare/v3.0.1...v3.0.2) — 2026-10-21
 
 - Odstraněn nepoužívaný historický build Tailwindu a jeho závislosti se zranitelnostmi v braces, source-map-js a postcss-selector-parser. Hlavní web používá vlastní CSS; archivní stránka zachovává hotové legacy-v2-tailwind.css.

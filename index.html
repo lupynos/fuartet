@@ -2,7 +2,7 @@
 ---
 
 <!doctype html>
-<html lang="cs">
+<html lang="cs" data-theme="{{ site.band_theme | default: 'electric' }}">
 
 <head>
   <meta charset="utf-8">
@@ -11,7 +11,10 @@
     content="fuARTet propojuje funkové rytmy, rockovou energii a jazzovou hravost. Koncerty, videa, vlastní hudba a kontakt pro pořadatele.">
   <link rel="canonical" href="https://fuartet.cz/">
   <title>fuARTet — funk, rock a jazz</title>
+  <script src="files/js/theme-init.js"></script>
   <link rel="stylesheet" href="files/css/site.css">
+  <link rel="stylesheet" href="files/css/acoustic.css">
+  <script src="files/js/theme.js" defer></script>
   <script src="files/js/site.js" defer></script>
 </head>
 
@@ -19,14 +22,26 @@
   <header class="header"><a class="wordmark" href="#main" aria-label="fuARTet — úvod">fu<span>ART</span>et</a>
     <nav aria-label="Hlavní navigace"><a href="#koncerty">Koncerty</a><a href="#hudba">Hudba</a><a
         href="#kapela">Kapela</a><a href="#kontakt">Kontakt</a></nav>
+    <nav class="theme-switch" aria-label="Verze kapely">
+      <a href="?theme=electric" data-theme-link="electric">Electric</a>
+      <a href="?theme=acoustic" data-theme-link="acoustic">Acoustic</a>
+    </nav>
   </header>
   <main id="main" tabindex="-1">
-    <section class="hero" aria-labelledby="hero-title"><img class="hero-art" src="files/pic/fuartet-hero-ai-v1.webp"
+    <section class="hero" aria-labelledby="hero-title"><img class="hero-art electric-only" src="files/pic/fuartet-hero-ai-v1.webp"
         width="1440" height="480" alt="fuARTet — Fusion · Art · Quartet" fetchpriority="high">
+      <div class="acoustic-banner acoustic-only">
+        <img src="files/pic/acoustic-session.svg" width="1440" height="480" alt="" fetchpriority="high">
+        <div class="acoustic-signature"><span class="eyebrow">Dřevo. Struny. Prostor.</span>
+          <span class="acoustic-logo">fu<span>ART</span>et</span>
+          <span class="acoustic-subtitle">A C O U S T I C &nbsp; S E S S I O N S</span>
+        </div>
+        <span class="session-note">Čtyři nástroje. Jeden společný zvuk.</span>
+      </div>
       <div class="hero-copy">
-        <p class="eyebrow">Čtyři muzikanti. Vlastní cesta.</p>
-        <h1 id="hero-title">Funkový rytmus.<br> Rocková energie.<br><em>Jazzová hravost.</em></h1>
-        <p class="lead">Vlastní instrumentální hudba.<br>Prostor pro improvizaci. Radost z hraní.</p>
+        <p class="eyebrow"><span class="electric-only">Čtyři muzikanti. Vlastní cesta.</span><span class="acoustic-only">fuARTet v akustické podobě</span></p>
+        <h1 id="hero-title"><span class="electric-only">Funkový rytmus.<br> Rocková energie.<br><em>Jazzová hravost.</em></span><span class="acoustic-only">Stejná hravost.<br> Jiná barva.<br><em>Blíž k sobě.</em></span></h1>
+        <p class="lead"><span class="electric-only">Vlastní instrumentální hudba.<br>Prostor pro improvizaci. Radost z hraní.</span><span class="acoustic-only">Akustická kytara a basa. Piano, hammond a bicí.<br>Vlastní hudba v přirozených barvách.</span></p>
         <div class="actions"><a class="button primary" href="#hudba">▶ Pustit video</a><a class="button" href="#koncerty">Kde hrajeme ↓</a>
         <a class="button" href="#kontakt">Domluvit koncert ↗</a></div>
       </div><a class="next-show" href="#koncerty"><span class="live-dot"></span><span>Nejbližší koncert <strong>4. prosince
@@ -142,11 +157,12 @@
       <div class="band-photo"><img src="files/pic/F6s.webp" width="926" height="600"
           alt="Členové kapely fuARTet při společném hraní" loading="lazy"><span>Fusion / Art / Quartet</span></div>
       <div class="band-copy">
-        <p class="eyebrow">Kytara · klávesy · basa · bicí</p>
+        <p class="eyebrow"><span class="electric-only">Kytara · klávesy · basa · bicí</span><span class="acoustic-only">Dřevo · struny · klávesy · rytmus</span></p>
         <h2>Čtyři hlasy.<br>Beze slov<span>.</span></h2>
-        <p>fuARTet propojuje funkové rytmy, rockovou energii a jazzovou hravost. Vlastní skladby, barevné syntezátory a
+        <p class="electric-only">fuARTet propojuje funkové rytmy, rockovou energii a jazzovou hravost. Vlastní skladby, barevné syntezátory a
           prostor pro improvizaci.</p>
-        <p>Hudba, ve které spolu nástroje vedou rozhovor — někdy soustředěný, jindy pěkně nahlas.</p>
+        <p class="acoustic-only">Akustická podoba fuARTetu dává vlastním skladbám jinou barvu. Akustickou kytaru a akustickou basu doplňuje piano a hammond sound kláves Nord Electro 7. Bicí drží společný puls.</p>
+        <p><span class="electric-only">Hudba, ve které spolu nástroje vedou rozhovor — někdy soustředěný, jindy pěkně nahlas.</span><span class="acoustic-only">Prostor pro detail, improvizaci a vzájemné poslouchání. Čtyři hlasy, které si mají co říct i beze slov.</span></p>
         <div class="members">
           <details class="member">
             <summary><span>Tomáš Borovička</span><small>kytara</small></summary>
@@ -242,14 +258,15 @@
       <details class="press">
         <summary>Materiály pro pořadatele <span>Bio a fotografie ↓</span></summary>
         <div class="press-copy">
-          <p>fuARTet propojuje funkové rytmy, rockovou energii a jazzovou hravost. Čtveřice muzikantů s kytarou,
+          <p class="electric-only">fuARTet propojuje funkové rytmy, rockovou energii a jazzovou hravost. Čtveřice muzikantů s kytarou,
             klávesami, baskytarou a bicími staví na vlastních instrumentálních skladbách a prostoru pro improvizaci.
             Výrazné melodie se potkávají s barevnými zvuky syntezátorů a rytmikou, která drží všechno pohromadě.</p>
+          <p class="acoustic-only">Akustická podoba fuARTetu propojuje akustickou kytaru a akustickou basu s pianem, hammond soundem kláves Nord Electro 7 a bicími. Čtveřice muzikantů staví na vlastních instrumentálních skladbách, výrazných melodiích a prostoru pro improvizaci. Přirozené barvy nástrojů dávají vyniknout detailům i společnému rytmu.</p>
           <p>Kapela se ráda vydává přes hranice žánrů a nechává jednotlivým nástrojům prostor přinést vlastní nápady. Na
             pódiu občas přibírá hosty a sólisty, kteří do společné hry vnášejí další barvy. Za hudbou fuARTetu stojí
             především radost z hraní, vzájemného poslouchání a hledání toho, co může vzniknout mezi čtyřmi muzikanty.
             Hudba beze slov, ve které spolu nástroje vedou rozhovor — někdy soustředěný, jindy pěkně nahlas.</p>
-          <div class="downloads"><a class="button" href="files/press/fuartet-bio.txt" download>Bio kapely · TXT ↓</a><a
+          <div class="downloads"><a class="button electric-only" href="files/press/fuartet-bio.txt" download>Bio kapely · TXT ↓</a><a class="button acoustic-only" href="files/press/fuartet-acoustic-bio.txt" download>Akustické bio · TXT ↓</a><a
               class="button" href="files/pic/F1s.jpg" download>Fotografie 1 · JPG ↓</a><a class="button"
               href="files/pic/F6s.jpg" download>Fotografie 2 · JPG ↓</a></div>
           <p>Technické požadavky a podmínky vystoupení domluvíme individuálně.</p>

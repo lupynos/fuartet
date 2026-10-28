@@ -1,0 +1,82 @@
+/* Shared switch; the original electric palette and layout stay in site.css. */
+.acoustic-only { display: none; }
+.theme-switch { display: flex; gap: 3px; padding: 4px; border: 1px solid var(--line); border-radius: 30px; flex-shrink: 0; }
+.header .theme-switch a { display: inline-flex; align-items: center; justify-content: center; min-height: 36px; padding: 6px 14px; border-radius: 24px; font-size: 11px; letter-spacing: .04em; }
+[data-theme="electric"] [data-theme-link="electric"] { background: var(--cyan); color: #071015; }
+[data-theme="acoustic"] [data-theme-link="acoustic"] { background: #573a29; color: #fff7e9; }
+@media (max-width: 767px) {
+  .header { flex-wrap: wrap; }
+  .header > nav:first-of-type { order: 3; width: 100%; justify-content: space-between; }
+}
+@media (max-width: 480px) {
+  .header { flex-direction: row; gap: 8px; }
+  .header .theme-switch { width: auto; gap: 3px; }
+  .header .theme-switch a { padding: 5px 11px; }
+}
+
+/* Acoustic: ivory paper, walnut, copper and the rings of a soundboard. */
+:root[data-theme="acoustic"] {
+  color-scheme: light;
+  --bg: #eee5d6;
+  --panel: #e9ddcb;
+  --ink: #35291f;
+  --muted: #71604f;
+  --cyan: #96502b;
+  --line: #62482b30;
+}
+[data-theme="acoustic"] .electric-only { display: none; }
+[data-theme="acoustic"] .acoustic-only { display: block; }
+[data-theme="acoustic"] .button.acoustic-only { display: inline-flex; }
+[data-theme="acoustic"] body::before {
+  background:
+    repeating-linear-gradient(91deg, transparent 0 6px, #68442104 7px 8px, transparent 9px 17px),
+    radial-gradient(ellipse at 0 30%, #c6a17835, transparent 65%), #eee5d6;
+}
+[data-theme="acoustic"] .header,
+[data-theme="acoustic"] .footer { background-color: #f5eddfd9; }
+[data-theme="acoustic"] .section { background-color: #f9f3e8ed; }
+[data-theme="acoustic"] .hero { background: #f6edde; }
+[data-theme="acoustic"] h1,
+[data-theme="acoustic"] h2,
+[data-theme="acoustic"] .listening h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -.045em;
+}
+[data-theme="acoustic"] h1 em { font-style: italic; }
+[data-theme="acoustic"] .hero-copy h1 br:first-child { display: initial; }
+[data-theme="acoustic"] .hero-copy h1 br:first-child::after { content: none; }
+[data-theme="acoustic"] .eyebrow { letter-spacing: .2em; }
+[data-theme="acoustic"] .hero-copy { padding-top: 35px; }
+.acoustic-banner { position: relative; overflow: hidden; color: #f8ebd5; background: #382619; }
+.acoustic-banner > img { width: 100%; height: auto; min-height: 240px; object-fit: cover; }
+.acoustic-signature { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 20px; }
+.acoustic-signature .eyebrow { color: #e4c396; font-size: 10px; margin-bottom: 8px; }
+.acoustic-logo { font: 400 clamp(52px, 8.5vw, 120px)/1.2 Georgia, serif; letter-spacing: -.065em; text-shadow: 0 3px 24px #160e0780; }
+.acoustic-logo > span { color: #e3ba82; }
+.acoustic-subtitle { font-size: clamp(8px, 1vw, 12px); letter-spacing: .28em; margin-top: 12px; }
+.session-note { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); color: #d2bda1; font: italic 13px Georgia, serif; white-space: nowrap; }
+[data-theme="acoustic"] .button { border-color: #9b7d5c; border-radius: 3px; }
+[data-theme="acoustic"] .button:hover { background: #e7d9c3; border-color: #75462b; color: #35291f; }
+[data-theme="acoustic"] .primary { background: #75452c; border-color: #75452c; color: #fff8eb; }
+[data-theme="acoustic"] .primary:hover { background: #57331f; color: #fff8eb; }
+[data-theme="acoustic"] .next-show { background: #e7dac4; }
+[data-theme="acoustic"] .live-dot { background: #7c613c; }
+[data-theme="acoustic"] .event time b { font-family: Georgia, serif; }
+[data-theme="acoustic"] .archive { background: #ede2d2; }
+[data-theme="acoustic"] .archive > summary:hover { background: #96502b08; }
+[data-theme="acoustic"] .listening { border: 1px solid var(--line); border-radius: 3px; }
+[data-theme="acoustic"] .band-photo img { border-radius: 3px; }
+[data-theme="acoustic"] .booking { background-image: radial-gradient(ellipse at 100% 20%, #c3954c20, transparent 70%); }
+[data-theme="acoustic"] .social a { background: #4c3829; }
+[data-theme="acoustic"] .rhythm-tap.is-beat { background: #d9c09a; }
+@media (min-width: 1100px) {
+  [data-theme="acoustic"] .hero-copy h1 { font-size: 62px; }
+}
+@media (max-width: 480px) {
+  .acoustic-banner > img { width: 180%; max-width: none; margin-left: -40%; height: 260px; }
+  .acoustic-signature .eyebrow { font-size: 8px; }
+  .acoustic-subtitle { letter-spacing: .18em; }
+  .session-note { font-size: 11px; bottom: 22px; }
+  [data-theme="acoustic"] .hero-copy { padding-top: 26px; }
+}

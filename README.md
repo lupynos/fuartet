@@ -25,13 +25,19 @@ V patičce je drobná interakce **Najdi rytmus**: po čtyřech klepnutích uká�
 
 ## Náhled a údržba
 
-Pro lokální náhled stačí HTTP server; CSS se upravuje přímo, bez sestavování. Postup spuštění a řešení problémů s přehrávači jsou v [návodu pro správu webu](docs/DEVELOPMENT.md).
+Pro lokální náhled spusťte v PowerShellu z kořene projektu `.\preview.ps1` (vyžaduje Python 3.7+, bez npm a Node.js). Odkazy na obě varianty vypíše terminál. Web se čte přímo ze zdrojů: po uložení úprav stačí obnovit prohlížeč, bez buildu či restartu serveru. Ukončení: Ctrl+C. Vlastní port lze zadat pomocí `.\preview.ps1 -Port 8090`. Další možnosti a řešení problémů s přehrávači jsou v [návodu pro správu webu](docs/DEVELOPMENT.md).
 
-Na začátku `index.html` ponechte prázdný YAML front matter (dva řádky `---`). Jekyll díky němu při sestavení doplní datum do patičky. Obyčejný lokální HTTP server tuto šablonu nevyhodnocuje.
+Na začátku `index.html` ponechte prázdný YAML front matter (dva řádky `---`). Jekyll díky němu při sestavení doplní datum do patičky. Náhledový skript front matter skryje a doplní dnešní datum i výchozí variantu z konfigurace; zdrojové soubory nemění.
 
 ## Verze webu
 
-Významnější úpravy označujeme Git tagem, nyní **v3.0.2**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Web má dva přepínatelné vzhledy se společným obsahem a rozložením: **Electric** (původní tmavý) a **Acoustic** (krémová, ořechové dřevo a měď). Přepínač je v hlavičce. Přímé odkazy jsou `/?theme=electric` a `/?theme=acoustic`; explicitní odkaz má přednost před výchozí verzí. Přepnutí neobnovuje stránku a zachovává spuštěný přehrávač i aktuální sekci. Volba se neukládá do prohlížeče, takže návštěva bez parametru vždy odpovídá nastavení webu.
+
+Výchozí verzi pro GitHub Pages nastavte v `_config.yml`: `band_theme: electric` nebo `band_theme: acoustic`. Pro samostatný statický build lze použít `npm run build`, případně v PowerShellu `$env:BAND_THEME='acoustic'` a poté `npm run build`. Výstup je ve složce `dist/`; lokální proměnnou následně zrušte pomocí `Remove-Item Env:BAND_THEME`. Git tag může označit vydání s daným nastavením, samotný název tagu vzhled nepřepíná.
+
+Akustické styly jsou v `files/css/acoustic.css`, vlastní vektorová ilustrace v `files/pic/acoustic-session.svg` a ovládání ve `files/js/theme-init.js` a `files/js/theme.js`. Vlastní texty obou variant jsou v jednom `index.html`, bio ke stažení má akustickou variantu `files/press/fuartet-acoustic-bio.txt`. Koncerty, fotografie a nahrávky zůstávají společné.
+
+Významnější úpravy označujeme Git tagem, nyní **v3.1.0**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.

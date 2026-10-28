@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="480" viewBox="0 0 1440 480">
+  <defs>
+    <linearGradient id="walnut" x2="0" y2="1"><stop stop-color="#5c3b25"/><stop offset=".5" stop-color="#39281e"/><stop offset="1" stop-color="#241b15"/></linearGradient>
+    <linearGradient id="spruce" x2="1" y2=".5"><stop stop-color="#aa723d"/><stop offset=".45" stop-color="#d4a766"/><stop offset="1" stop-color="#85512d"/></linearGradient>
+    <linearGradient id="ivory" x2="0" y2="1"><stop stop-color="#f0dfbd"/><stop offset="1" stop-color="#bba17c"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#bb854742"/><stop offset="1" stop-color="#25170d00"/></radialGradient>
+    <pattern id="grain" width="180" height="480" patternUnits="userSpaceOnUse"><g fill="none" stroke="#dfac6f" stroke-width=".7" opacity=".13"><path d="M12 0Q-14 150 18 310T23 480M20 0Q-6 150 26 310T31 480M60 0Q105 190 70 330T80 480M68 0Q113 190 78 330T88 480M120 0Q78 150 126 290T135 480M131 0Q89 150 137 290T146 480M162 0Q190 150 164 290T174 480"/></g></pattern>
+    <pattern id="keys" width="36" height="190" patternUnits="userSpaceOnUse"><path d="M1 1h33v186H1z" fill="url(#ivory)" stroke="#433023" stroke-width="2"/><path d="M25 0h17v112H25z" fill="#211d18" stroke="#15130f" stroke-width="2"/></pattern>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%"><feDropShadow dx="12" dy="18" stdDeviation="16" flood-color="#100b07" flood-opacity=".6"/></filter>
+    <filter id="paper"><feTurbulence type="fractalNoise" baseFrequency=".6" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope=".045"/></feComponentTransfer><feBlend in="SourceGraphic" mode="soft-light"/></filter>
+  </defs>
+  <path fill="url(#walnut)" d="M0 0h1440v480H0z"/>
+  <path fill="url(#grain)" d="M0 0h1440v480H0z"/>
+  <ellipse cx="700" cy="80" rx="720" ry="520" fill="url(#light)"/>
+  <!-- A soundboard and its six strings; an illustration, not a band photograph. -->
+  <g transform="translate(102 275) rotate(-24)" filter="url(#shadow)">
+    <path d="M-245-196C-164-254-69-233-32-156C-6-102 22-111 49-141C88-182 176-139 193-64C215 23 141 45 115 78C87 111 114 147 90 188C44 270-103 273-177 211C-255 146-201 67-217 21C-238-38-316-101-245-196Z" fill="url(#spruce)" stroke="#e7c086" stroke-width="5"/>
+    <path d="M-245-196C-164-254-69-233-32-156C-6-102 22-111 49-141C88-182 176-139 193-64C215 23 141 45 115 78C87 111 114 147 90 188C44 270-103 273-177 211C-255 146-201 67-217 21C-238-38-316-101-245-196Z" fill="url(#grain)"/>
+    <circle r="81" cx="-29" cy="-10" fill="#422b1b" stroke="#e5c58c" stroke-width="3"/><circle r="73" cx="-29" cy="-10" fill="none" stroke="#b9935f" stroke-width="3"/><circle r="63" cx="-29" cy="-10" fill="#19130e" stroke="#d7b77d" stroke-width="2"/>
+    <path d="M-69-480H10v388h-79Z" fill="#3b291d" stroke="#b08753" stroke-width="3"/>
+    <g stroke="#bea080" stroke-width="2" opacity=".6"><path d="M-68-115H9M-68-141H9M-68-172H9M-68-208H9M-68-250H9M-68-297H9M-68-350H9M-68-410H9"/></g>
+    <rect x="-86" y="126" width="115" height="22" rx="5" fill="#382319"/><path d="M-62 128H5" stroke="#e2d4ac" stroke-width="4"/>
+    <g stroke="#ead5a8" stroke-width="1" opacity=".72"><path d="M-60-480v615M-48-480v615M-36-480v615M-24-480v615M-12-480v615M0-480v615"/></g>
+  </g>
+  <!-- Warm keyboard ivory and a restrained red edge recalling the stage piano. -->
+  <g transform="translate(1235 45) rotate(24)" filter="url(#shadow)">
+    <rect x="-24" y="-100" width="350" height="630" rx="12" fill="#4e2a20" stroke="#93643e" stroke-width="3"/>
+    <rect x="-11" y="-85" width="16" height="598" rx="3" fill="#8b3c2c"/>
+    <g transform="translate(24 480) rotate(-90)"><rect width="550" height="255" fill="#241e18"/><rect width="550" height="190" fill="url(#keys)"/></g>
+  </g>
+  <!-- Fine concentric arcs echo a cymbal and the resonance of wood. -->
+  <g fill="none" stroke="#c7a06b" opacity=".17"><circle cx="1000" cy="490" r="132"/><circle cx="1000" cy="490" r="139"/><circle cx="1000" cy="490" r="146"/><circle cx="1000" cy="490" r="153"/><circle cx="1000" cy="490" r="160"/></g>
+  <path d="M390 0h660v480H390z" fill="#20180f" opacity=".19"/>
+  <path fill="transparent" filter="url(#paper)" d="M0 0h1440v480H0z"/>
+</svg>

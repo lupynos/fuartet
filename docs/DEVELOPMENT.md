@@ -2,11 +2,42 @@
 
 Statický web kapely: https://fuartet.cz/
 
-Web nepotřebuje instalaci balíčků ani build; hotové CSS je v repozitáři. Máte-li Python, spusťte z kořene projektu `py -m http.server 8080 --bind 127.0.0.1` a otevřete http://127.0.0.1:8080/.
+Pro testování stačí Python 3.7+ a PowerShell. Server čte HTML, CSS, JavaScript i obrázky přímo ze zdrojů; nepotřebuje npm, Node.js, instalaci balíčků ani build.
+
+```powershell
+cd C:\dev\fuartet
+.\preview.ps1
+```
+
+Terminál vypíše přímé odkazy na Acoustic a Electric, obvykle na portu 8080. Obsazený nebo systémem zakázaný port (WinError 10013) automaticky přeskočí. Pokud nelze použít ani okolní porty, nechá volný port vybrat operační systém. Vždy otevřete skutečnou adresu vypsanou v terminálu. Terminál nechte otevřený; server ukončíte Ctrl+C. Po uložení úprav stačí obnovit prohlížeč (Ctrl+F5), server není nutné restartovat.
+
+Vlastní port: `.\preview.ps1 -Port 8090`. Počáteční odkaz na Electric: `.\preview.ps1 -Theme electric`. Pokud PowerShell blokuje spouštění skriptů, použijte jednorázově `powershell -NoProfile -ExecutionPolicy Bypass -File .\preview.ps1`; trvalé nastavení systému se tím nemění.
+
+Skript hledá Python v příkazech `py`, `python` a `python3`. Vlastní instalaci lze zadat parametrem `-Python 'C:\cesta\python.exe'`. Python server lze spustit i přímo: `py scripts/preview.py`.
 
 ## Styly ve verzi 3
 
-Aktivní stránka používá pouze files/css/site.css a files/js/site.js. Styly se upravují přímo.
+Aktivní stránka používá `files/css/site.css`, akustické přepisy v `files/css/acoustic.css` a skripty `site.js`, `theme-init.js` a `theme.js`. Styly se upravují přímo. `theme-init.js` se načítá před CSS, aby přímý odkaz na variantu neproblikl původními barvami.
+
+### Náhled obou variant a výchozí verze
+
+V hlavičce jsou odkazy Electric a Acoustic; používají parametry `?theme=electric` a `?theme=acoustic`. Přepínání vyžaduje JavaScript; obsah i výchozí vzhled sestaveného webu fungují také bez něj. Historie prohlížeče vrací předchozí variantu. Parametr má přednost před nastavením buildu a nic se neukládá do localStorage.
+
+Pro GitHub Pages změňte `band_theme` v `_config.yml` (`electric` nebo `acoustic`). Jekyll doplní hodnotu do atributu `data-theme` v HTML. Git tag jen označuje revizi, nastavení nemění.
+
+Náhled přes `preview.ps1` načítá výchozí variantu z `_config.yml` při každém požadavku. Odstraní Jekyll front matter a nahradí dva používané Liquid výrazy (variantu a datum). Datum v lokálním náhledu znamená dnešní místní datum. Zdrojové soubory se nemění a složka `dist/` se nepoužívá.
+
+### Volitelný statický build pro publikaci
+
+Pro publikaci mimo Jekyll je ponechaný samostatný build s Node.js (bez dalších balíčků). Pro lokální testování ho nepotřebujete:
+
+```powershell
+$env:BAND_THEME='acoustic'
+npm run build
+Remove-Item Env:BAND_THEME
+```
+
+Bez `BAND_THEME` build převezme hodnotu z `_config.yml`. Neplatná hodnota build zastaví. Složka `dist/` je ignorovaná Gitem a obsahuje hotový web včetně `.nojekyll`; lze ji publikovat jako statický artefakt. Stávající publikování zdrojů přes Jekyll funguje dál.
 
 ## Historické styly (v2)
 
@@ -31,16 +62,16 @@ Spusťte lokální HTTP server a prohlédněte web na mobilu i desktopu. Ověřt
 
 Otevírejte web přes lokální HTTP server. Dvojklik na index.html používá file:// a nemusí vloženým přehrávačům poskytnout potřebný kontext ani HTTP Referer.
 
-V PowerShellu (Node.js a pnpm musí být dostupné):
+V PowerShellu:
 
 ```powershell
 cd C:\dev\fuartet
-pnpm dlx http-server@14.1.1 . -a 127.0.0.1 -p 8080 -c-1
+.\preview.ps1
 ```
 
-Příkaz dlx při prvním spuštění potřebuje připojení k registru balíčků. Server je dostupný pouze na tomto počítači. Otevřete http://127.0.0.1:8080/ v běžném prohlížeči. Terminál nechte spuštěný; ukončíte ho Ctrl+C. Parametr -c-1 vypíná cache lokálního serveru. Pokud je port obsazený, použijte -p 8081 a odpovídající adresu.
+Server je dostupný pouze na tomto počítači. V běžném prohlížeči otevřete odkaz vypsaný v terminálu. Cache je vypnutá. Obsazený port se automaticky přeskočí.
 
-Máte-li nainstalovaný Python, alternativou bez balíčku http-server je:
+Pro úplně jednoduchý server bez zpracování šablony lze použít standardní Python příkaz:
 
 ```powershell
 cd C:\dev\fuartet
@@ -66,7 +97,7 @@ Po úpravách CSS obnovte prohlížeč; server sám stránku neobnovuje. Při po
 - Nedostupné, soukromé nebo pro vložení zakázané video lokální server neopraví. Zkontrolujte také dostupnost přímo u poskytovatele.
 - Lokální HTTP server umožní běžný náhled, ale nezaručuje přehrání veškerého externího obsahu. Před publikováním ověřte přehrávače i na cílové HTTPS doméně.
 
-Oficiální dokumentace: [http-server](https://github.com/http-party/http-server), [chyby YouTube iframe přehrávače](https://developers.google.com/youtube/iframe_api_reference#onError), [diagnostika Spotify embeds](https://developer.spotify.com/documentation/embeds/tutorials/troubleshooting).
+Oficiální dokumentace: [chyby YouTube iframe přehrávače](https://developers.google.com/youtube/iframe_api_reference#onError), [diagnostika Spotify embeds](https://developer.spotify.com/documentation/embeds/tutorials/troubleshooting).
 
 ## Historie změn
 
@@ -78,6 +109,6 @@ Na začátku index.html musí zůstat dva řádky `---` (prázdný YAML front ma
 
 Publikace musí obsahovat Jekyll build; samotné nahrání statických souborů v custom GitHub Actions workflow Liquid nevyhodnotí. Soubor .nojekyll by při standardním publikování z větve Jekyll vypnul.
 
-Lokální http-server ani Python http.server šablony nezpracovávají: zobrazí surový výraz a mohou zobrazit i front matter. Pro náhled odpovídající produkci použijte Jekyll build/serve v prostředí s Ruby a Jekyllem; obyčejný HTTP náhled slouží jen k orientační kontrole obsahu a přehrávačů.
+Obyčejný Python http.server šablony nezpracovává: zobrazí surový výraz a může zobrazit i front matter. Doporučený `preview.ps1` tyto konkrétní výrazy zpracovává průběžně, ale nenahrazuje celý Jekyll. Pro úplné ověření produkčního sestavení použijte Jekyll build/serve.
 
 Dokumentace: [Jekyll front matter](https://jekyllrb.com/docs/frontmatter/) a [site.time](https://jekyllrb.com/docs/variables/).
