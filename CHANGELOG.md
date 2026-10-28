@@ -6,6 +6,11 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [3.1.1](https://github.com/lupynos/fuartet/compare/v3.1.0...v3.1.1) — 2026-10-28
+
+- Acoustic nastavena jako výchozí varianta pro GitHub Pages, lokální Python náhled i statický build. Electric zůstává dostupná přepínačem a přímým odkazem.
+- Ověřeno: konfigurace a výchozí atribut tématu v lokálním náhledu i statickém buildu, syntaxe skriptů a git diff --check.
+
 ## [3.1.0](https://github.com/lupynos/fuartet/compare/v3.0.2...v3.1.0) — 2026-10-28
 
 - Náhled přeskakuje i porty zakázané Windows (WinError 10013); při nedostupnosti celého okolního rozsahu vybere volný port operační systém. Vypisuje skutečnou adresu serveru.

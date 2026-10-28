@@ -37,7 +37,9 @@ Výchozí verzi pro GitHub Pages nastavte v `_config.yml`: `band_theme: electric
 
 Akustické styly jsou v `files/css/acoustic.css`, vlastní vektorová ilustrace v `files/pic/acoustic-session.svg` a ovládání ve `files/js/theme-init.js` a `files/js/theme.js`. Vlastní texty obou variant jsou v jednom `index.html`, bio ke stažení má akustickou variantu `files/press/fuartet-acoustic-bio.txt`. Koncerty, fotografie a nahrávky zůstávají společné.
 
-Významnější úpravy označujeme Git tagem, nyní **v3.1.0**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Výchozí varianta je nyní **Acoustic**; Electric je dostupná přepínačem nebo odkazem `/?theme=electric`.
+
+Významnější úpravy označujeme Git tagem, nyní **v3.1.1**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.

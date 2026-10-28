@@ -1,6 +1,6 @@
 # Default band version on GitHub Pages: electric | acoustic.
 # Direct links ?theme=electric and ?theme=acoustic override this value.
-band_theme: electric
+band_theme: acoustic
 exclude:
   - node_modules
   - scripts
