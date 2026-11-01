@@ -9,6 +9,9 @@
     const requested = new URLSearchParams(location.search).get('theme');
     const theme = ['electric', 'acoustic'].includes(requested) ? requested : root.dataset.defaultTheme;
     root.dataset.theme = theme;
+    document.querySelectorAll('[data-theme-icon]').forEach(icon => {
+      icon.href = `files/pic/favicon-${theme}.${icon.dataset.themeIcon}`;
+    });
     const acoustic = theme === 'acoustic';
     document.title = acoustic ? 'fuARTet — acoustic sessions' : originalTitle;
     description.content = acoustic

@@ -4,7 +4,7 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 ## Nevydané změny
 
-Zatím žádné.
+- Favicon nově používá monogram „fu“ ve dvou barevných variantách: Electric (tyrkysová na tmavém podkladu) a Acoustic (měděná na krémovém podkladu). Přepíná se spolu s tématem i při navigaci historií prohlížeče; výchozí ikonu určuje konfigurace webu.
 
 ## [3.1.2](https://github.com/lupynos/fuartet/compare/v3.1.1...v3.1.2) — 2026-11-02
 

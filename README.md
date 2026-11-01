@@ -39,6 +39,8 @@ Akustické styly jsou v `files/css/acoustic.css`, vlastní vektorová ilustrace 
 
 Výchozí varianta je nyní **Acoustic**; Electric je dostupná přepínačem nebo odkazem `/?theme=electric`.
 
+Favicon s monogramem „fu“ má vlastní barevnou variantu pro každý vzhled (`files/pic/favicon-electric.*` a `files/pic/favicon-acoustic.*`, SVG a ICO). Mění se spolu s přepínačem i historií prohlížeče. Bez JavaScriptu odpovídá výchozí variantě z konfigurace. Kořenový `favicon.ico` slouží jako záložní akustická ikona.
+
 Významnější úpravy označujeme Git tagem, nyní **v3.1.2**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.

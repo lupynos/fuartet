@@ -6,4 +6,7 @@
   const valid = value => value === 'electric' || value === 'acoustic';
   root.dataset.defaultTheme = valid(configured) ? configured : 'electric';
   root.dataset.theme = valid(requested) ? requested : root.dataset.defaultTheme;
+  document.querySelectorAll('[data-theme-icon]').forEach(icon => {
+    icon.href = `files/pic/favicon-${root.dataset.theme}.${icon.dataset.themeIcon}`;
+  });
 })();

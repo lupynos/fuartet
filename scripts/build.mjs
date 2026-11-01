@@ -10,7 +10,7 @@ const output = path.join(root, 'dist');
 await mkdir(output, { recursive: true });
 let html = await readFile(path.join(root, 'index.html'), 'utf8');
 html = html.replace(/^---\r?\n[\s\S]*?---\r?\n/, '')
-  .replace("{{ site.band_theme | default: 'electric' }}", theme)
+  .replaceAll("{{ site.band_theme | default: 'electric' }}", theme)
   .replace('{{ site.time | date: "%Y-%m-%d" }}', new Date().toISOString().slice(0, 10));
 await writeFile(path.join(output, 'index.html'), html);
 await cp(path.join(root, 'files'), path.join(output, 'files'), { recursive: true });
