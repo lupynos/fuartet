@@ -6,6 +6,12 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 Zatím žádné.
 
+## [3.1.2](https://github.com/lupynos/fuartet/compare/v3.1.1...v3.1.2) — 2026-11-02
+
+- Přidán favicon s tyrkysovým „f“ na tmavém podkladu ve formátech SVG a ICO (16, 32 a 48 px).
+- Ikony propojeny z hlavní stránky a zahrnuty do samostatného statického buildu.
+- Ověřeno: statický build, odkazy a shoda zkopírovaných ikon, tři velikosti ICO a git diff --check.
+
 ## [3.1.1](https://github.com/lupynos/fuartet/compare/v3.1.0...v3.1.1) — 2026-10-28
 
 - Acoustic nastavena jako výchozí varianta pro GitHub Pages, lokální Python náhled i statický build. Electric zůstává dostupná přepínačem a přímým odkazem.

@@ -14,7 +14,7 @@ html = html.replace(/^---\r?\n[\s\S]*?---\r?\n/, '')
   .replace('{{ site.time | date: "%Y-%m-%d" }}', new Date().toISOString().slice(0, 10));
 await writeFile(path.join(output, 'index.html'), html);
 await cp(path.join(root, 'files'), path.join(output, 'files'), { recursive: true });
-for (const file of ['CNAME', 'legacy-v2.html', 'test.html']) {
+for (const file of ['CNAME', 'favicon.ico', 'legacy-v2.html', 'test.html']) {
   await cp(path.join(root, file), path.join(output, file));
 }
 // This output is already rendered; GitHub Pages must not render it a second time.

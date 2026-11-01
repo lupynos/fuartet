@@ -39,7 +39,7 @@ Akustické styly jsou v `files/css/acoustic.css`, vlastní vektorová ilustrace 
 
 Výchozí varianta je nyní **Acoustic**; Electric je dostupná přepínačem nebo odkazem `/?theme=electric`.
 
-Významnější úpravy označujeme Git tagem, nyní **v3.1.1**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
+Významnější úpravy označujeme Git tagem, nyní **v3.1.2**. Číslo označuje podobu webu, nikoli hudební vydání kapely. Běžné aktualizace koncertů stačí ukládat jako commity.
 
 - Opravy: zvýšit poslední číslo, například `2.1.1`.
 - Nové funkce nebo sekce: zvýšit prostřední číslo, například `2.2.0`.
