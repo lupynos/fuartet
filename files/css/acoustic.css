@@ -29,12 +29,12 @@
 [data-theme="acoustic"] .button.acoustic-only { display: inline-flex; }
 [data-theme="acoustic"] body::before {
   background:
-    repeating-linear-gradient(91deg, transparent 0 6px, #68442104 7px 8px, transparent 9px 17px),
-    radial-gradient(ellipse at 0 30%, #c6a17835, transparent 65%), #eee5d6;
+    linear-gradient(#eee5d6c4, #eee5d6d6),
+    url("../pic/F4s.webp") center / cover no-repeat;
 }
 [data-theme="acoustic"] .header,
-[data-theme="acoustic"] .footer { background-color: #f5eddfd9; }
-[data-theme="acoustic"] .section { background-color: #f9f3e8ed; }
+[data-theme="acoustic"] .footer { background-color: #f5eddf80; }
+[data-theme="acoustic"] .section { background-color: #f9f3e8b8; }
 [data-theme="acoustic"] .hero { background: #f6edde; }
 [data-theme="acoustic"] h1,
 [data-theme="acoustic"] h2,

@@ -4,7 +4,12 @@ Verze označují stav zdrojového kódu Git tagem. Datum vydání není potvrzen
 
 ## Nevydané změny
 
+## [3.1.3](https://github.com/lupynos/fuartet/compare/v3.1.2...v3.1.3) — 2026-11-06
+
+- Acoustic používá stejné fotografické pozadí jako Electric, s krémovým překryvem a stejnou mírou průhlednosti pozadí, hlavičky, patičky a obsahových sekcí.
 - Favicon nově používá monogram „fu“ ve dvou barevných variantách: Electric (tyrkysová na tmavém podkladu) a Acoustic (měděná na krémovém podkladu). Přepíná se spolu s tématem i při navigaci historií prohlížeče; výchozí ikonu určuje konfigurace webu.
+
+- Ověřeno: statický build a git diff --check.
 
 ## [3.1.2](https://github.com/lupynos/fuartet/compare/v3.1.1...v3.1.2) — 2026-11-02
 
